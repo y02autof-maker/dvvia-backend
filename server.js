@@ -880,6 +880,11 @@ app.post('/api/appointments/:id/cancel', async (req, res) => {
   } catch (err) { res.status(500).json({ success: false, error: err.message }); }
 });
 
+<TouchableOpacity style={styles.menuItem} onPress={() => router.push('/my-listings')}>
+  <Text style={styles.menuIcon}>🚗</Text>
+  <Text style={styles.menuLabel}>My Listings</Text>
+  <Text style={styles.menuArrow}>›</Text>
+</TouchableOpacity>
 // ─── HEALTH ───────────────────────────────────────────────────────────────────
 
 app.get('/api/health', async (req, res) => {
